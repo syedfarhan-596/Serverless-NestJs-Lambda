@@ -4,8 +4,9 @@ useDotenv: true
 plugins:
   - serverless-offline
 
-provider: aws
-runtime: nodejs20.x
+provider:
+  name: aws
+  runtime: nodejs20.x
 
 functions:
   main:

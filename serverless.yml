@@ -1,0 +1,19 @@
+service: serverless-nestjs
+useDotenv: true
+
+pluging:
+  - serverless-offline
+
+provider: aws
+runtime: nodejs22.x
+
+functions:
+  main:
+    handler: dist/serverless.handler
+    events:
+      - http:
+          method: ANY
+          path: /
+      - http:
+          method: ANY
+          path: '{proxy+}'

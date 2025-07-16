@@ -1,11 +1,11 @@
 service: serverless-nestjs
 useDotenv: true
 
-pluging:
+plugins:
   - serverless-offline
 
 provider: aws
-runtime: nodejs22.x
+runtime: nodejs20.x
 
 functions:
   main:

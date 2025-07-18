@@ -20,6 +20,7 @@ export const handler: Handler = async (
   context: Context,
   callback: Callback,
 ): Promise<any> => {
+  if (event.path === '' || event.path === undefined) event.path = '/';
   cachedServer = cachedServer ?? (await bootstrap());
   return cachedServer(event, context, callback);
 };

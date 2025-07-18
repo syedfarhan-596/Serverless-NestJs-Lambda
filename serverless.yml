@@ -10,7 +10,6 @@ provider:
   runtime: nodejs22.x
   stage: ${env:ENV}
   region: ap-south-1
-  esbuild: false
 
 functions:
   main:
@@ -27,3 +26,5 @@ custom:
   webpack:
     webpackConfig: ./webpack.config.js
     includeModules: true
+
+  esbuild: false

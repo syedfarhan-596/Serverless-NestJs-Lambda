@@ -3,7 +3,7 @@ const nodeExternals = require('webpack-node-externals');
 const { TsconfigPathsPlugin } = require('tsconfig-paths-webpack-plugin');
 
 module.exports = {
-  entry: './src/main.ts',
+  entry: './src/serverless.ts',
   target: 'node',
   mode: 'production',
   externals: [nodeExternals()],
@@ -21,7 +21,7 @@ module.exports = {
     ],
   },
   output: {
-    filename: 'bundle.js',
+    filename: 'serverless.js',
     path: path.resolve(__dirname, 'dist'),
     libraryTarget: 'commonjs2',
   },

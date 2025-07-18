@@ -3,6 +3,7 @@ useDotenv: true
 
 plugins:
   - serverless-offline
+  - serverless-webpack
 
 provider:
   name: aws
@@ -20,3 +21,8 @@ functions:
       - http:
           method: ANY
           path: '{proxy+}'
+
+custom:
+  webpack:
+    webpackConfig: ./webpack.config.js
+    includeModules: true

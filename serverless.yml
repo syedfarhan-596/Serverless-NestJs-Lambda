@@ -27,4 +27,5 @@ custom:
     webpackConfig: ./webpack.config.js
     includeModules: true
 
+build:
   esbuild: false

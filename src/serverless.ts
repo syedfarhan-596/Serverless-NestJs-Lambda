@@ -7,7 +7,7 @@ import { Express } from 'express';
 let cachedServer: Handler;
 
 async function bootstrap(): Promise<Handler> {
-  const app = await NestFactory.create(AppModule);
+  const app = await NestFactory.create(AppModule, { logger: ['log'] });
   await app.init();
 
   const expressApp = app.getHttpAdapter().getInstance() as Express;

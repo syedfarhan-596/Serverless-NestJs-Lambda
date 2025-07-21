@@ -37,7 +37,7 @@ lerna-debug.log*
 
 #Serviceless - deploy files
 .serverless/*
-tsconfig.build.tsbuildinfo
+*.tsbuildinfo
 
 # dotenv environment variable files
 .env
